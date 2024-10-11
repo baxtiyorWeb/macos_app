@@ -20,7 +20,7 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,8 +40,19 @@
       "last 1 safari version"
     ]
   },
+  "build": {
+    "appId": "com.example.electronapp",
+    "mac": {
+      "target": "dmg"
+    },
+    "files": [
+      "build/**/*",
+      "main.js"
+    ]
+  },
   "devDependencies": {
     "electron": "^32.2.0",
+    "electron-builder": "^25.1.7",
     "gh-pages": "^6.2.0"
   }
 }
